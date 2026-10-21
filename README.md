@@ -1,11 +1,12 @@
-# CS701 Tutorial · LoRA for a Pretrained ViT
+# CS701 Tutorial · PEFT for a Pretrained ViT: Adapter, AdaptFormer, LoRA
 
 CS701 (SMU), Week 10 tutorial, 23 Oct 2026 · TA Zichen
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/doem97/cs701-w10-lora-tutorial/blob/main/W10_T1_lora_for_vit.ipynb)
 
-In this notebook, you adapt one pretrained ViT-B/16 to a small dataset in three ways:
-linear probe, full fine-tuning and LoRA. You write LoRA yourself (about 15 lines).
+In this notebook, you adapt one pretrained ViT-B/16 to a small dataset (200 images).
+You compare training from scratch, full fine-tuning, linear probe and three PEFT methods: Adapter, AdaptFormer and LoRA.
+You write each PEFT method yourself (about 15 lines each). The three PEFT methods get the same budget, LR, epochs and seed.
 
 ## How to run
 
@@ -14,7 +15,7 @@ linear probe, full fine-tuning and LoRA. You write LoRA yourself (about 15 lines
 3. **Runtime → Change runtime type → T4 GPU.**
 4. Run the cells from the top, one by one.
 
-Each training cell takes about one minute on the free T4.
+Each training cell takes about one minute on the free T4 (about 6 minutes of training in total).
 Your numbers can differ a little from the slides.
 
 ## Files
@@ -32,5 +33,6 @@ EuroSAT: Helber et al., 2019, MIT licence.
 
 ## Your assignment
 
-The `LoRA` class in this notebook is the same as the class in `sarbench/adapters.py` of the assignment code
+The `LoRA` class in this notebook is the same as the class in `sarbench/adapters.py` of the assignment code.
+Adapter and AdaptFormer are ideas to try there
 (https://github.com/doem97/cs701-sar-benchmark).
