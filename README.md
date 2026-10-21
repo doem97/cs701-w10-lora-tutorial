@@ -15,7 +15,7 @@ linear probe, full fine-tuning and LoRA. You write LoRA yourself (about 15 lines
 4. Run the cells from the top, one by one.
 
 Each training cell takes about one minute on the free T4.
-Your numbers can differ from the slides by 1–2 points.
+Your numbers can differ from the slides by up to 3 points: Colab's T4 uses float16.
 
 ## Files
 
